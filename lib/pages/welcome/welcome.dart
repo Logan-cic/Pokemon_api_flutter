@@ -1,14 +1,16 @@
+import 'package:consumindo_api_com_flutter/pages/home.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
-class Welcomw extends StatefulWidget {
-  const Welcomw({super.key});
+class Welcome extends StatefulWidget {
+  const Welcome({super.key});
 
   @override
-  State<Welcomw> createState() => _WelcomwState();
+  State<Welcome> createState() => _WelcomeState();
 }
 
-class _WelcomwState extends State<Welcomw> {
+class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,8 +64,9 @@ class _WelcomwState extends State<Welcomw> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                      ElevatedButton(
-                      onPressed: () {},
-                      child: Text("Iniciar", style: TextStyle(fontSize: 18),),
+                      onPressed: () => Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => HomeScreen()))), 
+                    child: Text("Iniciar", style: TextStyle(fontSize: 18),),
                       style: ButtonStyle(
                         minimumSize: MaterialStateProperty.all(Size(350, 60)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(

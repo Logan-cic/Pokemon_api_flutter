@@ -1,6 +1,5 @@
-import 'package:consumindo_api_com_flutter/home/home_page.dart';
-import 'package:consumindo_api_com_flutter/home/http/http_page.dart';
-import 'package:consumindo_api_com_flutter/home/welcome/welcome.dart';
+import 'package:consumindo_api_com_flutter/pages/home.dart';
+import 'package:consumindo_api_com_flutter/pages/welcome/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,18 +13,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      getPages: [
-        GetPage(
-          name: "/",
-          page: () => const Welcomw(),
-        
-        )
-      ],
+      home: Welcome(),
     );
   }
 }
-// HomePage(), children: [
-//             GetPage(name: "/http", page: () => HttpPage())
-//           ]
