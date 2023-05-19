@@ -1,6 +1,5 @@
 import 'package:consumindo_api_com_flutter/pages/home.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
 class Welcome extends StatefulWidget {

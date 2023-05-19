@@ -64,7 +64,16 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/animations/pokemon.json
-  #   - images/a_dot_burr.jpeg
+    - assets/images/circle.png
+    - assets/images/circle@2x.png
+    - assets/images/circle@3x.png
+    - assets/images/pokeballCard@2x.png
+    - assets/images/pokeballCard@3x.png
+    - assets/images/pokeballCard.png
+    - assets/images/pokeball.png
+    - assets/images/dots@2x.png
+    - assets/images/dots.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

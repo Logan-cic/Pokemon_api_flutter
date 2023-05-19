@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../service/pokemon.dart';
+import 'components/cards/card_animation.dart';
+import 'components/cards/load.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -75,16 +77,20 @@ class _HomeScreenState extends State<HomeScreen> {
               itemCount: pokemons.length,
               itemBuilder: (context, index) {
                 final pokemon = pokemons[index];
-                return ListTile(
-                  title: Text(pokemon.name),
-                  subtitle: Text('ID: ${pokemon.id}'),
-                  trailing: Icon(Icons.chevron_right),
-                  onTap: () {
-                    // Handle navigation to details screen
-                  },
+                return CardAnimation(
+                  child: ListTile(
+                    title: Text(pokemon.name),
+                    subtitle: Text(
+                        'ID: ${pokemon.id}, ${pokemon.types.map((type) => type.name).toList()}'),
+                    trailing: Icon(Icons.chevron_right),
+                    onTap: () {
+                      // Handle navigation to details screen
+                    },
+                  ),
                 );
               },
             ),
+      bottomNavigationBar: Load(), // Adicione o componente Load ao final da tela
     );
   }
 }
