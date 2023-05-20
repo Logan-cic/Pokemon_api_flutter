@@ -1,21 +1,19 @@
-import 'package:consumindo_api_com_flutter/pages/home.dart';
-import 'package:consumindo_api_com_flutter/pages/welcome/welcome.dart';
+import 'package:consumindo_api_com_flutter/features/pokedex/screens/home/pages/welcome/welcome.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Welcome(),
+      title: 'POKÉDEX',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      home: Welcome() 
     );
   }
 }
